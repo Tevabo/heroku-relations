@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const customersRouter = require('./customers/routes')
 const companiesRouter = require('./companies/routes')
 const jwtRouter = require('./auth/routes')
+const userRouter = require('./users/routes')
 
 
 const app = express()
@@ -13,5 +14,6 @@ app
   .use(customersRouter)
   .use(companiesRouter)
   .use(jwtRouter)
+  .use(userRouter)
   .listen(port, () => console.log(`Listening on port ${port}`))
 
